@@ -1,0 +1,87 @@
+baseURL: "https://veyselusta.github.io"
+languageCode: en-us
+title: veysel usta
+theme: PaperMod
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+    - identifier: posts
+      name: Posts
+      url: /posts
+      weight: 20
+    - identifier: projects
+      name: Projects
+      url: /projects
+      weight: 30
+    - identifier: search
+      name: Search
+      url: /search
+      weight: 50
+
+params:
+  # theme
+  showToc: true
+  TocOpen: false
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  hideMeta: false
+
+  # for enchanced SEO
+  env: production
+
+  # Home Page
+  profileMode:
+    enabled: true
+    title: "veysel usta"
+    subtitle: "software developer"
+    imageUrl: "home/icarus.jpeg"
+    imageWidth: 300
+    imageHeight: 300
+    # buttons:
+    #   - name: Resume
+    #     url: ""
+
+  # List View
+  hideDescriptionInList: true
+
+  # cover image for posts
+  cover:
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+  socialIcons:
+    - name: "email"
+      url: "vyslusta1@gmail.com"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/veysel-usta/"
+    - name: "github"
+      url: "https://github.com/veyselusta"
+    # - name: "cv"
+    #  url: "https://drive.google.com/file/d/1U6Gg2RnHSCthtWLbZJBlAEI3V1WGjZty/view"
+
+  # text search
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+# for search using Fuse.js
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# allow HTML in MD
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
